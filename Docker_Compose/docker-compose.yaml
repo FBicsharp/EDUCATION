@@ -1,0 +1,21 @@
+version: "3"
+services:
+  websites:
+    image: nginx
+    ports:
+        - "8080:80"
+    restart: always
+  websites:
+    image: nginx
+    ports:
+        - "8082:80"
+    restart: always
+    networks: 
+      mysite:
+        ipv4_address: 192.168.92.21
+networks:
+  mysite:
+    ipam:
+      driver: default
+      config:
+        -subent: "192.168.92.0/24" 
