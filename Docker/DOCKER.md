@@ -335,4 +335,27 @@ docker log
   └───────────────────────────────────────┘
 
 ```
+# BEST PRACTICE
+1. Using only verified image for be sure that the image are safe
+2. Avoid latest tag of image because shoul change behavior chose the main relase with OS distro for example alpine
+3. Exlude unused file inside image using .dockerignore file divide build stage from running multi stage for exlud unused file
+4. running container with dedicated group use command 
+```sh
+#create user and group
+RUN groupadd -r namegroup && useradd -g namegroup nameuser
+# allow app folder to this user
+RUN chown -R namegroup:nameuser /app
+# swith to user
+USER nameuser
+#run app
+CMD ["node","server.js"]
+
+```
+5. validate and finde vulnerabilites in image , using snyk
+```sh
+docker scan {appname:version}
+```
+6. optimize cache layer for example for packages
+
 [Video](https://www.youtube.com/watch?v=pg19Z8LL06w&t=311s)
+[Video](https://www.youtube.com/watch?v=8vXoMqWgbQQ)
