@@ -1,10 +1,10 @@
 # DOCKER IN PILLS
 
 # Table of content
-1. [What is Docker](#What-is-Docker)
-2. [Software delivery](#GO-IN-DEEP OF-RELEASE-SOFTWARE)
-3. [Image and contiainer and command](##Image-and-contiainer-command)
-4. [Port binding](###Port-binding)
+* [What is Docker](# What is Docker)
+* [Software delivery](# GO IN DEEP OF RELEASE SOFTWARE)
+* [Image and contiainer and command](## Image and contiainer command)
+* [Port binding](### Port binding)
 
 
 # What is Docker
