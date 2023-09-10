@@ -273,6 +273,11 @@ docker log
 
 
 # CONTINUOS INTEGRATION AND CONTINUOS DEPLOYMENT FLOW
+A package of external software such as database is pulled from docker hub and downloaded in developer machine,
+the developer wirte some code and push the changes via a commit.
+After the commit phase (according to repository configuration) the build of software start and publish the new relase in docker hub.
+## CI (continuos integration)
+
 ```
             ┌─────────────────┐
             │   DOCKER HUB    │
@@ -325,6 +330,14 @@ docker log
                     ▼
             ┌─────────────────┐
             │   DOCKER HUB    │
+            └─────────────────┘
+
+```
+## CD (continuos deployment)
+A package is pulled from docker hub and downloaded in a server
+```
+            ┌─────────────────┐
+            │   DOCKER HUB    │
             └─────┬──────┬────┘
                   │      │
                   ▼      ▼
@@ -339,6 +352,8 @@ docker log
   └───────────────────────────────────────┘
 
 ```
+
+
 # BEST PRACTICE
 1. Using only verified image for be sure that the image are safe
 2. Avoid latest tag of image because shoul change behavior chose the main relase with OS distro for example alpine
