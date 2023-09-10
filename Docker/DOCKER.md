@@ -272,7 +272,7 @@ docker logs
 docker log
 
 
-# FLOW 
+# CONTINUOS INTEGRATION AND CONTINUOS DEPLOYMENT FLOW
 ```
             ┌─────────────────┐
             │   DOCKER HUB    │
