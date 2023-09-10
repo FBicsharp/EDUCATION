@@ -374,6 +374,31 @@ A package is pulled from docker hub and downloaded in a server
 
 ```
 
+# Volumes
+When the container running  all change that we mad for example in Databse of file will be lost when the container will be restart.
+For avoid to lose the data we must use the volume for having perstience of data.
+The volumes is in a phisycal filesistem
+
+There is 3 type of volumes:
+- Host volume : is specified during container creation we can specify the volume for decide the palce of volume in host
+```sh
+docker run -v {Host volume}:{Container volume}
+docker run -v /home/mount/data:/var/lib/mysql/data 
+```
+
+- Anonymous volume: is automatically create from docker during container creation
+```sh
+docker run -v {Container volume}
+docker run -v /var/lib/mysql/data 
+```
+- Named volume (main used): is automatically create from docker during container creation but is referanced by name
+```sh
+docker run -v name:{Container volume}
+docker run -v name:/var/lib/mysql/data 
+```
+
+
+
 
 # BEST PRACTICE
 1. Using only verified image for be sure that the image are safe
