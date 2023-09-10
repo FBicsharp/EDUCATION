@@ -1,5 +1,5 @@
 # DOCKER IN PILLS
-Develop by googgle in 2013
+Develop by googgle in 2013, docker virtulize the application layer, the classinc VM vistrulize all system .
 
 The OS has 2 different layes 
 1. kernel ( comunicate with hardware )
@@ -42,7 +42,7 @@ PRONS
 CONS
 - Shared OS Kernel
 
-# GO IN DEEP OF RELEASE SOFTWARE
+# GO IN DEEP OF  RELEASE SOFTWARE
 
 COMMONLLY PROCESS
 
