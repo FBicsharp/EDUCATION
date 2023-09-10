@@ -2,16 +2,16 @@
 Develop by googgle in 2013
 
 The OS has 2 different layes 
-1. OS kernel ( comunicate with hardware )
-2. OS application ( your appllication )
+1. kernel ( comunicate with hardware )
+2. application ( your appllication )
 ```
  ┌────────────────────┐
- │OS APPLICATION LAYER│
+ │   APPLICATION LAYER│
  └─────────┬──────────┘
            │
            ▼
  ┌────────────────────┐
- │     OS KERNEL      │
+ │        KERNEL      │
  └─────────┬──────────┘
            │
            ▼
@@ -133,7 +133,7 @@ dokcer pull {Image}:{version}
 ```sh
 dokcer image ls
 ```
-- Running a container 
+- Running/create a container 
     After download an image with pull command you can now running , alternativly you can call the run command directly, docker chek in images list locally if it do not found it the image will be pulled autoimatically 
 ```sh
 dokcer run {Image}:{version}
@@ -154,9 +154,13 @@ dokcer logs {containerID or container name}
 ```sh
 dokcer stop {containerID or container name}
 ```
-- Start a container
+- Start an existing container
 ```sh
 dokcer startp {containerID or container name}
+```
+- Intercat with docker container,for navigate manage file etc
+```sh
+dokcer exec -it {containerID or container name}
 ```
 
 ### Port binding
