@@ -1,4 +1,13 @@
 # DOCKER IN PILLS
+
+# Table of content
+1. [What is Docker](#What-is-Docker)
+2. [Software delivery](#GO-IN-DEEP OF-RELEASE-SOFTWARE)
+3. [Image and contiainer and command](##Image-and-contiainer-command)
+4. [Port binding](###Port-binding)
+
+
+# What is Docker
 Develop by googgle in 2013, docker virtulize the application layer, the classinc VM vistrulize all system .
 
 The OS has 2 different layes 
@@ -42,7 +51,7 @@ PRONS
 CONS
 - Shared OS Kernel
 
-# GO IN DEEP OF  RELEASE SOFTWARE
+# GO IN DEEP OF RELEASE SOFTWARE
 
 COMMONLLY PROCESS
 
@@ -189,6 +198,17 @@ dokcer run -d -p 90:80 myAPP:1.0
 │                                            │  HOST PORT 90    │
 │                                            │                  │
 └────────────────────────────────────────────┴──────────────────┘
+```
+
+### Networking
+The network allow to setup the rule for connect a set group of container to talk to each other
+- Create a network
+```sh
+docker network create {networkname}
+```
+- List of all network
+```sh
+docker network ls
 ```
 
 ## Dockerfile for create image
